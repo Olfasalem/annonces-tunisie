@@ -2,24 +2,37 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="text-center mt-10">
-      <h2 className="text-4xl font-bold text-primary">
-        Bienvenue sur ANNONCES TUNISIE
-      </h2>
+    <section
+      className="h-[80vh] bg-cover bg-center flex items-center justify-center"
+      style={{
+        backgroundImage: "url('/images/banner.jpg')",
+      }}
+    >
+      <div className="bg-black/50 p-10 rounded-lg text-center text-white">
+        <h1 className="text-5xl font-bold mb-4">
+          ANNONCES TUNISIE
+        </h1>
 
-      <p className="mt-4">
-        Achetez, vendez et trouvez les meilleures offres.
-      </p>
+        <p className="mb-6">
+          Achetez, vendez et trouvez les meilleures offres.
+        </p>
 
-      <Link
-        href="/contact"
-        className="text-sm border border-primary text-primary
-                   px-4 py-2 rounded-md mt-6 inline-block
-                   hover:bg-primary hover:text-white
-                   transition-all duration-300"
-      >
-        Contactez-nous
-      </Link>
-    </div>
+        <div className="flex gap-4 justify-center">
+          <Link
+            href="/annonces"
+            className="bg-blue-600 px-6 py-3 rounded hover:bg-blue-700"
+          >
+            Annonces
+          </Link>
+
+          <Link
+            href="/publier"
+            className="bg-green-600 px-6 py-3 rounded hover:bg-green-700"
+          >
+            Publier
+          </Link>
+        </div>
+      </div>
+    </section>
   );
 }
